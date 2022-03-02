@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">NYCSchools</string>
+    <string name="school_detail_hours"><b>Hours:</b>\n%s</string>
+    <string name="school_detail_sat_result"><b>SAT Result:</b>\n%s</string>
+</resources>

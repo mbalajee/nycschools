@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="detail"
+            type="com.apps.nycschools.detail.model.SchoolDetail" />
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".detail.ui.SchoolDetailActivity">
+
+        <LinearLayout
+            android:id="@+id/schoolDetailContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@{detail.name}"
+                tools:text="School name"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:text="@{detail.address}"
+                tools:text="School address"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="phone"
+                android:textSize="14sp"
+                android:text="@{detail.phone}"
+                tools:text="123-123-1233"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="email"
+                android:textSize="14sp"
+                android:text="@{detail.email}"
+                tools:text="abc@gmail.com"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:autoLink="web"
+                android:textSize="14sp"
+                android:text="@{detail.website}"
+                tools:text="http://www.nycshools.com"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textSize="14sp"
+                android:text="@{@string/school_detail_hours(detail.hours)}" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textSize="14sp"
+                android:text="@{@string/school_detail_sat_result(detail.satResult)}" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>
